@@ -1,5 +1,16 @@
 # Shell Navigation
+ A project during my Full Stack Software Engineering studies at ALX Africa, a course offred by Holberton School. 
 
+## Technologies 
+- Files written in vi, vim, and emacs editors. 
+- C files compiled using gcc 9.4.0
+- C files wriiten according to the betty coding style 
+- Files tested on Ubuntu 20.04 LTS using gcc
+
+## Files
+
+| Filename  | Description |
+| ---  | --- |
 **0-current_working_directory:** Write a script that prints the absolute path name of the current working directory.
 
 **1-listit:** Display the contents list of your current directory.
