@@ -1,5 +1,15 @@
 # Shell permissions
 
+- A project during my Full Stack Software Engineering studies at [ALX Africa](https://www.alxafrica.com/software-engineering-2022/), a course offered by [Holberton School](https://www.holbertonschool.com/). 
+
+## Technologies 
+
+- Files written in ```vi```, ```vim```, and ```emacs``` editors. 
+- C files compiled using ```gcc 9.4.0```.
+- C files wriiten according to the betty coding style.
+- Files tested on ```Ubuntu 20.04``` LTS using ```gcc```.
+
+## Files
 **0-iam_betty**: Create a script that switches the current user to the user betty. You should use exactly 8 characters for your command (+1 character for the new line). You can assume that the user betty will exist when we will run your script.
 
 **1-who_am_i**: Write a script that prints the effective username of the current user.
