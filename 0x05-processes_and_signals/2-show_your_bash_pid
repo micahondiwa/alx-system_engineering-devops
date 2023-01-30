@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #Displays a list of current processes
 # shellcheck disable=SC2009
-ps --forest | grep bash
+ps -ef | grep -w bash | grep -v grep | awk '{print $2}'
