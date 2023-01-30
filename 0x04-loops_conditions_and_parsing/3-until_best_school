@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Prints 'Best Schol' 10 times using until loop
+count=1
+until [ $count -gt 10 ]
+do 
+	echo "Best School"
+	count=$((count + 1))
+done
