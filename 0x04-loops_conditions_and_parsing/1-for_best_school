@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 #This script prints "Best School" 10 times
-var="Best School"
-for ((i=1;i=10;1++));do
-echo "$var"
+for _ in {1..10}; do
+	echo "Best School"
 done
