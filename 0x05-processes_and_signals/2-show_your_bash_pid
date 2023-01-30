@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Displays a list of current processes
+ps --forest | grep bash
