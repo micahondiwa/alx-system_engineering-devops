@@ -1,0 +1,16 @@
+#!/usr/bin/env bash 
+#Prints bad luck, good luck and Best school
+count=1
+while [ $count -le 10 ]
+do
+if [ $count -eq 4 ]
+then
+echo "Bad Luck"
+elif [ $count -eq 8 ]
+then
+echo "Good Luck"
+else
+echo "Best School"
+fi 
+count=$((count+1))
+done
