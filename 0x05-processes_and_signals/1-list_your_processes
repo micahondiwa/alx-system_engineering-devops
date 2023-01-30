@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
-#Prints process
-echo "List of currently running processes:"
-echo "PID | PPID | CMD"
-ps -ef |awk '{printf "%-5s %-5s %s\n", $2, $3, $8}'
+#Prints processes
+ps -aux --forest
