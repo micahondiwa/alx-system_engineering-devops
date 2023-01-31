@@ -15,3 +15,6 @@
 |[0x01-shell_permissions](0x01-shell_permissions)|Implements shell permission commands including ```chmod```, ```sudo```, ```su```, ```chown```, ```chgrp```|
 |[0x02-shell_redirections](0x02-shell_redirections)|Implements she;; redirection commands including ```head```, ```tail```, ```find```, ```wc```, ```sort```, ```uniq```, ```grep```, ```tr```|
 |[0x03-shell_variables_expansions](0x03-shell_variables_expansions)|Implementing variable expansions commands including ```printenv```,```set```,```unset```,```export```,```alias```,```unalias```,```.```,```source```,```printf```|
+|[0x04-loops_conditions_and_parsing](0x04-loops_conditions_and_parsing)|0x04-loops_conditions_and_parsing|
+|[0x05-processes_and_signals](0x05-processes_and_signals)|0x05-processes_and_signals|
+|[0x06-regular_expressions](0x06-regular_expressions)|0x06-regular_expressions|
