@@ -1,6 +1,6 @@
 # Command Line for A Win
 
-- Project contains the soultion to the [cdmchallenge](https://cmdchallenge.com/). 
+- Project contains my soultion to the [cdmchallenge](https://cmdchallenge.com/). 
 
 ## 0-first_9_tasks.PNG: Solved challenge 1 to 9. 
 
