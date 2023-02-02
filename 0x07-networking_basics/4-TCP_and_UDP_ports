@@ -1,6 +1,3 @@
 #!/usr/bin/env bash
-#Listens to the socekt
-echo "Listening sockets and their associated PIDs and programs:"
-echo ""
-ssh-tlp | awk '{if ($5 == "LISTEN") print $4, $6, $7}' | sort -k 1
-echo ""
+#Listens to the socket
+netstat -lp
