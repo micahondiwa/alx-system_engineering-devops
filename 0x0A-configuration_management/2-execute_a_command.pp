@@ -1,9 +1,6 @@
-# Kills a process name killmenow
+# Kills a process named killmenow
 
 exec { 'pkill killmenow':
   path     => '/usr/bin',
-  command  => 'pkill killmenow',
-  provider => shell,
- preturns  => [0, 1]
+  command  => 'pkill -f killmenow',
 }
-
