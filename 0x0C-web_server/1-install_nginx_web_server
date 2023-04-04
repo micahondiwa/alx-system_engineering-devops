@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # installing  Nginx web server
-apt-get update
-apt-get -y install nginx
+apt-get update -y
+apt-get -y install nginx -y
 ufw allow 'Nginx HTTP'
 mv /var/www/html/index.nginx-micah.html /var/www/html/save_index.nginx-micah.html
 echo "Hello World!" > /var/www/html/index.nginx-micah.html
