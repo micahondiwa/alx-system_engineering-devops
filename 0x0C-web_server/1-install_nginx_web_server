@@ -5,9 +5,8 @@ apt-get -y install nginx -y
 sudo apt-get install ufw
 ufw allow 'Nginx HTTP'
 mv /var/www/html/index.nginx-micah.html /var/www/html/save_index.nginx-micah.html
-echo "web-01 {
-    listen 80;
-    location / {
+echo "54.162.6.230{
+    listen 80; {
         echo 'Hello World!';
     }
 }" > /var/www/html/index.nginx-micah.html
