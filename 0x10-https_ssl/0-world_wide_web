@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Usage: ./1-world_wide_web <domain> <subdomain>
+# Usage: ./0-world_wide_web <domain> <subdomain>
 # displays the information about the subdomains
 
 if [ "$#" -eq 1 ]; then
