@@ -1,8 +1,26 @@
 #!/usr/bin/env bash
 # installing  Nginx web server
-sudo apt-get update
-sudo apt-get -y install nginx
-sudo ufw allow 'Nginx HTTP'
-mv /var/www/html/index.nginx-debian.html /var/www/html/save_index.nginx-debian.html
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
-/etc/init.d/nginx start
+#!/bin/bash
+apt-get update
+apt-get install -y nginx
+cat <<EOF > /etc/nginx/sites-available/default
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+
+        root /var/www/html;
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name _;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+
+        location / {
+                return 200 "Hello World!\n";
+        }
+}
+EOF
+kill $(cat /run/nginx.pid)
+nginx -g "daemon off;"
