@@ -3,4 +3,13 @@
 sudo apt update -y
 sudo apt install nginx
 echo "Hello World!" > /var/www/html/index.html
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /var/www/html/index.html;
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
 sudo service nginx restart
