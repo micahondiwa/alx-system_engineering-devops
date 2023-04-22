@@ -6,7 +6,7 @@ sed -i 's/listen\s*80;/listen 80 default_server;/g' /etc/nginx/sites-available/d
 kill $(cat /var/run/nginx.pid)
 /usr/sbin/nginx
 echo "Hello World!" > /var/www/html/index.html
-if [ $(curl -s -o /dev/null -w "%{http_code}" http://localhost) == 200 ]
+if [ $(curl -s -o /dev/null -w "%{http_code}" 54.162.6.230) == 200 ]
 then
   echo "Nginx is running and returning a 200 OK status code"
 else
