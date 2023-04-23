@@ -5,4 +5,4 @@ sudo apt-get install -y nginx
 sed -i 's/listen\s*80;/listen 80 default_server;/g' /etc/nginx/sites-available/default
 kill $(cat /var/run/nginx.pid)
 /usr/sbin/nginx
-echo "Hello World!" > /var/www/html/index.html
+
