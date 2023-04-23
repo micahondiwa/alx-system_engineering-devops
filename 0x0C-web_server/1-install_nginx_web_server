@@ -6,4 +6,3 @@ sed -i 's/listen\s*80;/listen 80 default_server;/g' /etc/nginx/sites-available/d
 kill $(cat /var/run/nginx.pid)
 /usr/sbin/nginx
 echo "Hello World!" > /var/www/html/index.html
-#curl -s -o /dev/null -w "%{http_code}" 54.162.6.230 == 200
