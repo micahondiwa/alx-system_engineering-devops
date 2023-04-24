@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" A python script that uses JSONPlacholder to get employee data and explort to JSON """
+""" A python script that uses JSONPlacholder to get employee data """
 import json
 import requests
 import sys
