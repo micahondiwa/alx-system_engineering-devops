@@ -1,13 +1,18 @@
 #!/usr/bin/env bash
 # sets the port 80, and nginx must be running
 
-sudo apt-get update
-sudo apt-get install nginx
-sudo systemctl start nginx
-sudo netstat -an | grep :80
-sudo nano /etc/nginx/nginx.conf
+sudo apt update
+sudo apt install net-tools curl -y
+existing_process=$(sudo netstat -tuln | grep ':80')
+if [ -n "$existing_process" ]; then
+  sudo netstat -tuln | grep ':80' | awk '{print $7}' | awk -F '/' '{print $1}' | xargs sudo kill -9
+fi
+sudo apt install nginx -y
+nginx_status=$(sudo systemctl status nginx)
+if [[ $nginx_status != *"active (running)"* ]]; then
+  sudo systemctl start nginx
+fi
+sudo sed -i 's/listen 80;/listen 80 default_server;/' /etc/nginx/sites-available/default
+sudo nginx -t
 sudo systemctl restart nginx
-sudo netstat -an | grep :80
-sudo firewall-cmd --zone=public --add-port=80/tcp --permanent
-sudo firewall-cmd --reload
-sudo service nginx restart
+sudo netstat -tuln | grep ':80'
