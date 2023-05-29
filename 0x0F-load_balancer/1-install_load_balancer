@@ -2,7 +2,7 @@
 # configures load balancer for the 2 servers
 
 sudo apt-get -y install software-properties-common
-sudo add-apt-repository -y ppa:vbernat/haproxy==2.0.\*
+sudo add-apt-repository -y ppa:vbernat/haproxy=2.0.\*
 sudo apt-get -y update
 sudo apt-get -y install haproxy=2.0.\*
 sudo sed -i -e '$aENABLED=1\n' /etc/default/haproxy 
