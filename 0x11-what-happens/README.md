@@ -1,6 +1,6 @@
 # What happens when you type google.com and hit enter?
 
-This is a project done during my Full Stack Software Engineering studies at [ALX Africa](https://www.alxafrica.com/software-engineering-2022/), a course offered by [Holberton School](https://www.holbertonschool.com/)
+A [blog](https://micahondiwa.hashnode.dev/what-happens-when-you-type-googlecom-and-press-enter) done during my Full Stack Software Engineering studies at [ALX Africa](https://www.alxafrica.com/software-engineering-2022/), a course offered by [Holberton School](https://www.holbertonschool.com/)
 
 ### Introduction
 Google, as we all know, is one of the most popular search engines on the web, and when we type https://www.google.com into our browser, a lot of things happen in the background that we may not be aware of. In this blog post, I will go over the numerous steps needed in getting to Google's website, and what happens in the background.
