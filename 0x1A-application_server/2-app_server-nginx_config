@@ -1,3 +1,7 @@
+# NGINIX server configuration
+# Serving locally and on its public IP on port 80
+# proxies requests to the process listening on port 5000.
+
 server {
 	listen 80 default_server;
 	listen [::]:80 ipv6only=on default_server;
