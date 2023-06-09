@@ -9,7 +9,7 @@
 - Files tested on ```Ubuntu 20.04``` LTS using ```gcc```.
 
 ## Directories 
-| Directory  | Description |
+| Directory  | Description|
 | ---  | --- |
 |[0x00-shell_basics](0x00-shell_basics)| Implements basics shell commands, file manipulation, and keyboard shortucts for Bash.|
 |[0x01-shell_permissions](0x01-shell_permissions)|Implements shell permission commands including ```chmod```, ```sudo```, ```su```, ```chown```, ```chgrp```|
