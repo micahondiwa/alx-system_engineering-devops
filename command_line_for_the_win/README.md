@@ -58,7 +58,7 @@ There are files in this challenge with different file extensions. Remove all fil
 ```
 find . type f -name *.doc -delete
 ```
-challenge 13: There is a file named access.log in the current working directory. Print all lines in this file that contains the string "GET"
+challenge 13: There is a file named access.log in the current working directory. Print all lines in this file that contains the string "GET".
 ```
 grep "GER" access.log
 ```
@@ -75,6 +75,6 @@ or
 ```
 ls -1 | grep "^access.log"
 ```
-challenge 16: Print all matching lines (without the filename or the file path) in all files under the current directory that start with "access.log" that contain the string "500". Note that there are no files named access.log in the current directory, you will need to search recursively
+challenge 16: Print all matching lines (without the filename or the file path) in all files under the current directory that start with "access.log" that contain the string "500". Note that there are no files named access.log in the current directory, you will need to search recursively.
 
 ## 2-next_9_tasks.PNG: Solved challenge 18 to 27.
