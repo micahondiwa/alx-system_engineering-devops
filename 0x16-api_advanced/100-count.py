@@ -70,6 +70,4 @@ def count_words(subreddit, word_list):
         print("")
 
 if __name__ == '__main__':
-    subreddit = "python"
-    keywords = ["Python", "java", "JavaScript"]  
     count_words(subreddit, keywords)
