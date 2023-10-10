@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
-The function queries the Reddit API 
-and printsthe top ten hot posts of 
-a subreddit
+Function that queries the Reddit API and prints
+the top ten hot posts of a subreddit
 """
 import re
 import requests
