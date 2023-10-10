@@ -34,8 +34,7 @@ def recurse(subreddit, dictionary, after=None):
         'after': after
     }
 
-    url = "https://www.reddit.com/r/{}/hot.json"
-    .format(subreddit)
+    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     res = requests.get(url,
                        headers=headers,
                        params=params,
