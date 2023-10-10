@@ -5,12 +5,11 @@ the top ten hot posts of a subreddit
 """
 import re
 import requests
-import sys
 
 
 def add_title(dictionary, hot_posts):
     """ Adds item into a list """
-    if len(hot_posts) == 0:
+    if not hot_posts:
         return
 
     title = hot_posts[0]['data']['title'].split()
@@ -24,10 +23,10 @@ def add_title(dictionary, hot_posts):
 
 
 def recurse(subreddit, dictionary, after=None):
-    """ Queries to Reddit API """
-    u_agent = 'Mozilla/5.0'
+    """ Queries the Reddit API """
+    user_agent = 'Mozilla/5.0'
     headers = {
-        'User-Agent': u_agent
+        'User-Agent': user_agent
     }
 
     params = {
@@ -53,7 +52,7 @@ def recurse(subreddit, dictionary, after=None):
 
 
 def count_words(subreddit, word_list):
-    """ Init function """
+    """ Initialization function """
     dictionary = {}
 
     for word in word_list:
@@ -61,12 +60,16 @@ def count_words(subreddit, word_list):
 
     recurse(subreddit, dictionary)
 
-    l = sorted(dictionary.items(), key=lambda kv: kv[1])
-    l.reverse()
+    l = sorted(dictionary.items(), key=lambda kv: kv[1], reverse=True)
 
-    if len(l) != 0:
+    if l:
         for item in l:
-            if item[1] is not 0:
+            if item[1] != 0:
                 print("{}: {}".format(item[0], item[1]))
     else:
         print("")
+
+if __name__ == '__main__':
+    subreddit = "python"
+    keywords = ["Python", "java", "JavaScript"]  
+    count_words(subreddit, keywords)
