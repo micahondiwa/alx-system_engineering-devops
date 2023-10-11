@@ -1,22 +1,13 @@
 #!/usr/bin/env bash
 # installs Nginx server, redirects /redirect_me and customizes 404 not found
 
-apt-get update
-apt-get -y install nginx
-sudo service nginx start
-sudo ufw allow 'Nginx HTTP'
-sudo chown -R "$USER":"$USER" /var/www/html
-sudo chmod -R 755 /var/www
-echo -e "Hello World!" > /var/www/html/index.html
-echo "Ceci n'est pas une page" > /var/www/html/404.html
-printf %s "server {
-    listen 80;
-    listen [::]:80 default_server;
-    root /var/www/html;
-    index index.html;
-    location /redirect_me {
-        return 301 https://www.freecodecamp.org/;
-    }
-    error_page 404 /404.html;
-}" > /etc/nginx/sites-enabled/default
+sudo apt-get -y update
+sudo apt install -y nginx
+
+echo"Hello Word!" | sudo tee /var/www/html/
+
+sudo sed -i '/server_name _;/a \	location /redirect_me {\n		return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n	}' /etc/nginx/sites-available/default
+
+echo "Ceci n'est pas une page" | sudo tee -a /var/www/html/error404.html
+sudo sed -i '/server_name _;/a\\terror_page 404 /error404.html;' /etc/nginx/sites-available/default
 sudo service nginx restart
