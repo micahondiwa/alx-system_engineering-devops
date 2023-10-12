@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # installing new Nginx web server and configuring it so that /redirect_me is redirecting to another page
+
 apt-get -y update
 apt-get -y install nginx
 echo "Hello World!" > /var/www/html/index.html
