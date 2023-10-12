@@ -3,7 +3,7 @@
 #    Install nginx on your web-01 server
 
 sudo apt-get -y update
-sudo apt-get install -y --allow-downgrades nginx
+sudo apt-get install -y nginx
 sudo ufw enable
 sudo ufw allow 'Nginx HTTP'
 sudo service nginx start
