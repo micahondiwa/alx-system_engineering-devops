@@ -1,8 +1,8 @@
-### Postmortem
+# Postmortem
 
 **Issue Summary:** Duration: May 25, 2023, 10:00 AM to May 25, 2023, 12:30 PM (UTC) Impact: The web service hosted on web-01 experienced an outage, resulting in slow or no access for users. Approximately 80% of users were affected by the service disruption.
 
-Timeline:
+## Timeline:
 
 10:00 AM: I detected the issue when a monitoring alert indicated high latency on web-01.
 
@@ -20,9 +20,12 @@ Actions taken: Together with the network engineering team, I reconfigured the ro
 
 12:30 PM: I officially resolved the incident as the web service was fully operational again.
 
-Root Cause and Resolution: Root Cause: The root cause of the web stack outage was a misconfigured routing on web-01. This misconfiguration caused traffic to be improperly routed, resulting in a service disruption.
+## Root Cause and Resolution
+### Root Cause
+The root cause of the web stack outage was a misconfigured routing on web-01. This misconfiguration caused traffic to be improperly routed, resulting in a service disruption.
 
-Resolution: I fixed the issue by correcting the routing configuration on web-01. Working closely with the network engineering team, I reviewed the routing tables and reconfigured them to ensure proper traffic flow. After the fix, traffic was correctly directed, and the web service was able to serve users as expected.
+### Resolution
+I fixed the issue by correcting the routing configuration on web-01. Working closely with the network engineering team, I reviewed the routing tables and reconfigured them to ensure proper traffic flow. After the fix, traffic was correctly directed, and the web service was able to serve users as expected.
 
 Corrective and Preventative Measures: To prevent similar incidents in the future and improve system reliability, I will implement the following measures:
 
